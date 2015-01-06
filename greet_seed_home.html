@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/greet_seed.css" rel="stylesheet" type="text/css"/>
+    <script lang="javascript" src="javascript/jquery-2.1.3.min.js"></script>
+    <script lang="javascript" src="javascript/slides.min.jquery.js"></script>
+    <script lang="javascript" src="javascript/home.js"></script>
+
+    <link href="//vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.11/video.js"></script>
+
+    <title>GreatSeed</title>
+</head>
+<body>
+
+    <!--head-->
+    <div class="head head-box">
+        <div class="row">
+            <div class="col-xs-2">
+                <img src="./image/logo.png"/>
+            </div>
+            <div class="col-xs-8">
+                <div class="row head-items-1">
+                    <div class="col-xs-1 head_crumb_1"><a href="#">ARTWORK</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">ARTISTS</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">NEWS</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">BLOG</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">COMMUNITY</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">MY SEED</a></div>
+                    <div class="col-xs-1 head_crumb_1"><a href="#">STORE</a></div>
+                </div>
+            </div>
+            <div class="col-xs-2 no-padding">
+                <div class="row head-items-2">
+                    <div class="col-xs-5 head_crumb_2">
+                        <a id="language">ENGLISH&nbspv</a>
+                    </div>
+                    <div class="col-xs-5 head_crumb_2">
+                        <a href="#">SIGNUP</a>&nbsp|&nbsp<a href="#">LOGIN</a>
+                    </div>
+                    <div class="col-xs-2 buy-box">
+                        <a href="#"><img src="image/buy_box.png"/></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="display: inline-flex;">
+                        <input class="control-label head-input"/>
+                        <label class="head-label"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--video-->
+    <video id="video" class="video-js vjs-default-skin vjs-big-play-centered hidden"
+           controls preload="auto" width="1366" height="800"
+           poster="image/poster.jpg"
+           data-setup='{"example_option":true}'>
+        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    </video>
+    <div class="video_des" id="video_des">
+        <img style="width: 1360px" src="image/poster.jpg"/>
+        <div class="video_dec_box">
+            <h4>The Art of Making:</h4>
+            <h2>Oiled-Paper Umbrella</h2>
+            <h4>Discover the Craftsmanship</h4>
+            <button id="video_discover">DISCOVER NOW</button>
+            <button>SHOP THE STORE</button>
+        </div>
+    </div>
+
+    <div class="row content-box">
+        <div class="col-xs-12">
+        <!--share icons-->
+            <div class="row content-item">
+                <div class="col-xs-6">
+                    <a href="#">
+                        <img src="image/share_icon/share-icon-facebook.png"/>
+                    </a>
+                    <a href="#">
+                        <img src="image/share_icon/share-icon-twitter.png"/>
+                    </a>
+                    <a href="#">
+                        <img src="image/share_icon/share-icon-mail.png">
+                    </a>
+                    <a href="#">
+                        <img src="image/share_icon/share-icon-sina.png"/>
+                    </a>
+                    <a href="#">
+                        <img src="image/share_icon/share-icon-more.png"/>
+                    </a>
+                </div>
+            </div>
+
+        <!--artists-->
+            <div class="row content-item margin-top-20">
+                <div class="col-xs-12">
+                    <h2>Masters of Traditional Handicraft-Featured Artist</h2>
+                    <p>Bow & Arrow from China</p>
+                </div>
+            </div>
+            <div class="row content-item">
+                <div class="col-xs-12" id="artists_slides">
+                    <div class="seeAll-item">
+                        <a href="#">
+                            <strong>See All</strong>
+                        </a>
+                    </div>
+                    <div class="artists_slides_container">
+                        <div>
+                            <img src="image/artist1.jpg"/>
+                        </div>
+                        <div>
+                            <img src="image/artist2.jpg"/>
+                        </div>
+                    </div>
+                    <a href="#" class="prev"><img src="image/slide_btn/pre.png"></a>
+                    <a href="#" class="next"><img src="image/slide_btn/next.png"></a>
+                </div>
+            </div>
+
+        <!--recent art-->
+            <div class="row content-item margin-top-20">
+                <div class="col-xs-12">
+                    <h2>Recent Art Collection</h2>
+                </div>
+            </div>
+            <div class="row content-item">
+                <div class="col-xs-12" id="recent_art_slides">
+                    <div class="seeAll-item">
+                        <a href="#">
+                            <strong>See All</strong>
+                        </a>
+                    </div>
+                    <div class="recent_art_slides_container">
+                        <!--第一页-->
+                        <div>
+                            <div class="row ra_item">
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col1.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col2.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col3.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--第二页-->
+                        <div>
+                            <div class="row ra_item">
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col4.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col5.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="ra_item_1">
+                                        <img src="image/art_col/art_col6.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev"><img src="image/slide_btn/pre.png"></a>
+                    <a href="#" class="next"><img src="image/slide_btn/next.png"></a>
+                </div>
+            </div>
+
+        <!--ad-->
+            <div class="row content-item ad-box">
+                <div class="col-xs-12">
+                    <div class="ad">
+                        <div class="col-xs-2 logo_black">
+                            <img src="image/logo_black.png"/>
+                        </div>
+                        <div class="col-xs-10">
+                            <p class="ad-font"><strong>A Global Community for Cultural Preservation,Transmission and Innovation.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--latest news-->
+            <div class="row content-item margin-top-20">
+                <div class="col-xs-12">
+                    <h2>Latest News</h2>
+                </div>
+            </div>
+            <div class="row content-item">
+                <div class="col-xs-12" id="latest_news_slides">
+                    <div class="seeAll-item">
+                        <a href="#">
+                            <strong>More</strong>
+                        </a>
+                    </div>
+                    <div class="latest_news_slides_container">
+                        <!--第一页-->
+                        <div>
+                            <div class="row ln_item">
+                                <div class="col-xs-9">
+                                    <div class="row no-margin">
+                                        <div class="col-xs-8 ln_img_box1 no-padding">
+                                            <img src="image/art_col/art_col6.jpg"/>
+                                        </div>
+                                        <div class="col-xs-4 ln_font_box1">
+                                            <p class="ln_font1">February 21.2014</p>
+                                            <h3>Lorem ipsum dolor sit amet,sectetetuer adipiscing elit</h3>
+                                            <p>sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 ">
+                                    <div class="row ln_item_1">
+                                        <div class="col-xs-12 no-padding" >
+                                            <a href="#" id="ln_item_3_1">
+                                                <img src="image/art_col/art_col3.jpg"/>
+                                            </a>
+                                            <div class="ln_item_3 hidden" id="ln_item_3_1_title">
+                                                Title Goes Here
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row ln_item_2">
+                                        <div class="col-xs-12 no-padding">
+                                            <a id="ln_item_4_1">
+                                                <img src="image/art_col/art_col2.jpg"/>
+                                            </a>
+                                            <div class="ln_item_4 hidden" id="ln_item_4_1_title">
+                                                <div class="ln_item_5">
+                                                    <a><img src="image/share_icon/share-icon-twitter.png"/></a>
+                                                    <a><img src="image/share_icon/share-icon-sina.png"/></a>
+                                                    <a><img src="image/share_icon/share-icon-mail.png"/></a>
+                                                    <p>Title Goes Here</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--第二页-->
+                        <div>
+                            <div class="row ln_item">
+                                <div class="col-xs-9">
+                                    <div class="row no-margin">
+                                        <div class="col-xs-8 ln_img_box1 no-padding">
+                                            <img src="image/art_col/art_col6.jpg"/>
+                                        </div>
+                                        <div class="col-xs-4 ln_font_box1">
+                                            <p class="ln_font1">February 21.2014</p>
+                                            <h3>Lorem ipsum dolor sit amet,sectetetuer adipiscing elit</h3>
+                                            <p>sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 ">
+                                    <div class="row ln_item_1">
+                                        <div class="col-xs-12 no-padding" >
+                                            <a id="ln_item_3_2">
+                                                <img src="image/art_col/art_col3.jpg"/>
+                                            </a>
+                                            <div class="ln_item_3 hidden" id="ln_item_3_2_title">
+                                                Title Goes Here
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row ln_item_2">
+                                        <div class="col-xs-12 no-padding">
+                                            <a id="ln_item_4_2">
+                                                <img src="image/art_col/art_col2.jpg"/>
+                                            </a>
+                                            <div class="ln_item_4 hidden" id="ln_item_4_2_title">
+                                                <div class="ln_item_5">
+                                                    <a><img src="image/share_icon/share-icon-twitter.png"/></a>
+                                                    <a><img src="image/share_icon/share-icon-sina.png"/></a>
+                                                    <a><img src="image/share_icon/share-icon-mail.png"/></a>
+                                                    <p>Title Goes Here</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="prev" style="top:135px"><img src="image/slide_btn/pre.png"></a>
+                    <a href="#" class="next" style="top:135px"><img src="image/slide_btn/next.png"></a>
+                </div>
+            </div>
+
+        <!--blog-->
+            <div class="row content-item margin-top-20">
+                <div class="col-xs-12">
+                    <h2>Featured Blogs</h2>
+                </div>
+            </div>
+            <div class="row content-item">
+                <div class="col-xs-12" id="blog_slides">
+                    <div class="seeAll-item">
+                        <a href="#">
+                            <strong>See All</strong>
+                        </a>
+                    </div>
+                    <div class="blog_slides_container">
+                        <!--第一页-->
+                        <div>
+                            <div class="row blog_item">
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog1.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog2.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog3.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--第二页-->
+                        <div>
+                            <div class="row blog_item">
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog4.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog5.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="blog_item_1">
+                                        <img src="image/blog_bg/blog6.jpg"/>
+                                    </div>
+                                    <div class="blog_item_2">
+                                        <p>February 21.2014</p>
+                                        <h3>Blog Title Goes Here</h3>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim.</p>
+                                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliguam erat volutpat.Ut wisi enim</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev" style="top:225px"><img src="image/slide_btn/pre.png"></a>
+                    <a href="#" class="next" style="top:225px"><img src="image/slide_btn/next.png"></a>
+                </div>
+            </div>
+
+        <!--become creator-->
+            <div class="row content-item margin-top-20">
+                <div class="col-xs-12">
+                    <h2>Become a Creator in our Arts and Cultural Heritage Community</h2>
+                </div>
+            </div>
+            <div class="row content-item">
+                <div class="col-xs-12" id="become_creator_slides">
+                    <div class="seeAll-item">
+                        <a href="#">
+                            <strong>Join Us</strong>
+                        </a>
+                    </div>
+                    <div class="become_creator_slides_container">
+                        <!--第一页-->
+                        <div>
+                            <div class="row ra_item">
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_left">
+                                        <img src="image/art_col/art_col1.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_left">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_mid">
+                                        <img src="image/art_col/art_col2.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_mid">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_mid">
+                                        <img src="image/art_col/art_col3.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_mid">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_right">
+                                        <img src="image/art_col/art_col2.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_right">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--第二页-->
+                        <div>
+                            <div class="row ra_item">
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_left">
+                                        <img src="image/art_col/art_col4.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_left">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_mid">
+                                        <img src="image/art_col/art_col5.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_mid">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_mid">
+                                        <img src="image/art_col/art_col2.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_mid">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="bc_item item_right">
+                                        <img src="image/art_col/art_col2.jpg"/>
+                                    </div>
+                                    <div class="bc_item_1 bc_item_1_right">
+                                        <strong>James Doe</strong>
+                                        <p>China</p>
+                                        <p>
+                                            <span style="float: left">Bow&Arrow</span>
+                                            <span style="float: right">15 items</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a href="#" class="prev"><img src="image/slide_btn/pre.png"></a>
+                    <a href="#" class="next"><img src="image/slide_btn/next.png"></a>
+                </div>
+            </div>
+
+        <!--cta-->
+            <div class="row cta">
+                <div class="col-xs-12 no-padding">
+                    <div>
+                        <img style="width: 1366px" src="image/cta.png"/>
+                    </div>
+                    <div class="cta_item">
+                        <div class="cta_font">
+                            <p>I want to be a Cultural</p>
+                            <p>Ambassador for my country!</p>
+                            <button>Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--footer-->
+            <div class="row foot-box">
+                <div class="col-xs-4 foot-box-1">
+                    <div class="row no-margin">
+                        <div class="col-xs-5 no-padding">
+                            <a href="#"><h5>About Us</h5></a>
+                        </div>
+                        <div class="col-xs-7 no-padding">
+                            <a href="#"><h5>Advertising</h5></a>
+                        </div>
+                    </div>
+                    <div class="row no-margin">
+                        <div class="col-xs-5 no-padding">
+                            <a href="#"><h5>contact</h5></a>
+                        </div>
+                        <div class="col-xs-7 no-padding">
+                            <a href="#"><h5>Constomer Service + Policy</h5></a>
+                        </div>
+                    </div>
+                    <div class="row no-margin">
+                        <div class="col-xs-5 no-padding">
+                            <a href="#"><h5>Help</h5></a>
+                        </div>
+                        <div class="col-xs-7 no-padding">
+                            <a href="#"><h5>Terms+Conditions</h5></a>
+                        </div>
+                    </div>
+                    <div class="row no-margin">
+                        <div class="col-xs-5 no-padding">
+                            <a href="#"><h5>Affiliates</h5></a>
+                        </div>
+                        <div class="col-xs-7 no-padding">
+                            <a href="#"><h5>Privacy</h5></a>
+                        </div>
+                    </div>
+                    <div class="row no-margin">
+                        <div class="col-xs-12 no-padding">
+                            <p>@2014 Great Seed Inc. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="foot-box-2">
+                        <h4>STAY CONNECTED</h4>
+                        <img src="image/footer_icon.png">
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="foot-box-3">
+                        <h5>Explore GreatSeed's fresh artwork</h5>
+                        <h5>and learn the stories behind them</h5>
+                        <div style="display: inline-flex">
+                            <input class="control-label foot-input" placeholder=" Your Email Address"/>
+                            <label class="foot-label">SUBSCRIBE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
